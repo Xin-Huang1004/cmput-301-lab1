@@ -1,4 +1,6 @@
 # cmput-301-lab1
-test 
-test
-test
+<<<<<<< HEAD
+
+=======
+asdsad123
+>>>>>>> 8319d132eaa16bcf7f45a2d473a8be7903dcec01
