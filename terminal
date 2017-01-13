@@ -1,0 +1,307 @@
+groups: cannot find name for group ID 1098389711
+xhuang2@5013-w18:~$ ls
+Android			    Desktop    Downloads  Pictures  Templates  bin
+C:\nppdf32Log\debuglog.txt  Documents  Music	  Public    Videos
+xhuang2@5013-w18:~$ cd Gitproducts
+bash: cd: Gitproducts: No such file or directory
+xhuang2@5013-w18:~$ cd Desktop
+xhuang2@5013-w18:~/Desktop$ cd Gitproducts
+xhuang2@5013-w18:~/Desktop/Gitproducts$ ls
+xhuang2@5013-w18:~/Desktop/Gitproducts$ git clone https://github.com/Xin-Huang1004/cmput-301-lab1.git
+Cloning into 'cmput-301-lab1'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+xhuang2@5013-w18:~/Desktop/Gitproducts$ cd cmput301-lab1
+bash: cd: cmput301-lab1: No such file or directory
+xhuang2@5013-w18:~/Desktop/Gitproducts$ cd cmput-301-lab1
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ ls
+LICENSE  README.md
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ 
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git config --global user.name "Xin"
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git config --global user.email "richardhuang1004@gmail.com"xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git config --global core.editor emacs
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git config --list
+user.name=Xin
+user.email=richardhuang1004@gmail.com
+core.editor=emacs
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Xin-Huang1004/cmput-301-lab1.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git log
+commit bd52f7593552ae4186ce10b5f937813b5311cee9
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:51:37 2017 -0700
+
+    readme test
+
+commit 2f11919d8c5136fe3697eef778a50d2a4e4daec7
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:50:25 2017 -0700
+
+    Initial commit
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git remote
+origin
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git remote -v
+origin	https://github.com/Xin-Huang1004/cmput-301-lab1.git (fetch)
+origin	https://github.com/Xin-Huang1004/cmput-301-lab1.git (push)
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git branch
+* master
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git branch testing
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git branch
+* master
+  testing
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git checkout testing
+Switched to branch 'testing'
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git branch
+  master
+* testing
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git branch -a
+  master
+* testing
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ ls
+LICENSE  README.md
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit README.md
+
+(gedit:4942): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+
+(gedit:4942): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git status
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git commit -a -m "Made a change to the readme"
+[testing 5d19077] Made a change to the readme
+ 1 file changed, 3 insertions(+)
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git log
+commit 5d1907777d277915e839841adb7d25c0203c8fe8
+Author: Xin <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 18:04:52 2017 -0700
+
+    Made a change to the readme
+
+commit bd52f7593552ae4186ce10b5f937813b5311cee9
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:51:37 2017 -0700
+
+    readme test
+
+commit 2f11919d8c5136fe3697eef778a50d2a4e4daec7
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:50:25 2017 -0700
+
+    Initial commit
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git status
+On branch testing
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md~
+
+nothing added to commit but untracked files present (use "git add" to track)
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git push -u origin testing
+Username for 'https://github.com': Xin-Huang1004
+Password for 'https://Xin-Huang1004@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Xin-Huang1004/cmput-301-lab1.git
+ * [new branch]      testing -> testing
+Branch testing set up to track remote branch testing from origin.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git checkout testing
+Already on 'testing'
+Your branch is up-to-date with 'origin/testing'.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ ls
+LICENSE  README.md  README.md~
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git log
+commit bd52f7593552ae4186ce10b5f937813b5311cee9
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:51:37 2017 -0700
+
+    readme test
+
+commit 2f11919d8c5136fe3697eef778a50d2a4e4daec7
+Author: Xin-Huang1004 <richardhuang1004@gmail.com>
+Date:   Thu Jan 12 17:50:25 2017 -0700
+
+    Initial commit
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git merge testing
+Updating bd52f75..5d19077
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit important_file.c
+
+(gedit:5057): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+
+(gedit:5057): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+
+(gedit:5057): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md~
+	important_file.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git add important_file.c
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   important_file.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md~
+
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git mv important_file.c
+usage: git mv [<options>] <source>... <destination>
+
+    -v, --verbose         be verbose
+    -n, --dry-run         dry run
+    -f, --force           force move/rename even if target exists
+    -k                    skip move/rename errors
+
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ ls
+LICENSE  README.md  README.md~	important_file.c
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git commit -a -m "Added an important file"
+[master 8f7d405] Added an important file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 important_file.c
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git pull origin master
+From https://github.com/Xin-Huang1004/cmput-301-lab1
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit README.md
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git pull origin master
+From https://github.com/Xin-Huang1004/cmput-301-lab1
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit README.md
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit README.md
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Xin-Huang1004/cmput-301-lab1
+ * branch            master     -> FETCH_HEAD
+   bd52f75..8319d13  master     -> origin/master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ gedit README.md
+
+(gedit:5148): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+
+(gedit:5148): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git commit -a -m "delete three lines"
+[master 9cfc654] delete three lines
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git push origin master
+Username for 'https://github.com': Xin-Huang1004
+Password for 'https://Xin-Huang1004@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 950 bytes | 0 bytes/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Xin-Huang1004/cmput-301-lab1.git
+   8319d13..9cfc654  master -> master
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ git clone https://github.com/Xin-Huang1004/FillerCreepForAndroid.git
+Cloning into 'FillerCreepForAndroid'...
+remote: Counting objects: 389, done.
+remote: Total 389 (delta 0), reused 0 (delta 0), pack-reused 389
+Receiving objects: 100% (389/389), 254.57 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (138/138), done.
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1$ cd FillerCreepForAndroid
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1/FillerCreepForAndroid$ git log
+commit 58878e809c9cce517788cbe6bf6acef05999702b
+Merge: e3f7689 63ce9a6
+Author: Abram Hindle <abram.hindle@softwareprocess.es>
+Date:   Tue Sep 8 14:33:20 2015 -0600
+
+    Merge pull request #3 from orezpraw/master
+    
+    Android Studio and Autoplay
+
+commit 63ce9a68bffbba886f569fb8379c3ac17427a786
+Author: Joshua Charles Campbell <github@orezpraw.com>
+Date:   Tue Sep 8 14:24:47 2015 -0600
+
+    Fix gradle for lab version
+
+commit 8618940f0572b220bb53e2bb563dda71eb420422
+Author: Joshua Charles Campbell <gitcommit@orezpraw.com>
+Date:   Fri Sep 4 16:37:32 2015 -0600
+
+    Eclipse -> Android Studio
+
+commit e3f7689dfc7629c70b5a2cfd73c9275592d7bf1d
+Author: Abram Hindle <abram.hindle@softwareprocess.es>
+Date:   Sun Dec 1 00:08:34 2013 -0700
+
+    Create README.md
+    
+    Added and explicit license.
+
+commit f81c8074bc9acf6d9b81a45c78afd136a68dc6c3
+Author: joshua <joshua@buttercup>
+Date:   Mon Sep 23 16:36:42 2013 -0600
+
+    Rearrange the buttons.
+
+commit 7bbfdd2d9ab4d5cfa2d55a11ca47a493d24db45e
+Author: joshua <joshua@buttercup>
+Date:   Mon Sep 23 15:48:16 2013 -0600
+
+    Implement auto-play functionality.
+
+commit 6696cfc38c7cd27f46f68eeb98c6efd5e1ab6847
+Author: joshua <joshua@buttercup>
+Date:   Mon Sep 23 15:33:22 2013 -0600
+
+    Added a button.
+
+commit 28866fac773b87328dca6c069f33929bc8633929
+Merge: 280552e e151f69
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1/FillerCreepForAndroid$ 
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1/FillerCreepForAndroid$ ls
+FillerCreepForAndroid.iml  app	  build.gradle	gradlew      import-summary.txt  settings.gradle
+README.md		   build  gradle	gradlew.bat  local.properties
+xhuang2@5013-w18:~/Desktop/Gitproducts/cmput-301-lab1/FillerCreepForAndroid$ 
